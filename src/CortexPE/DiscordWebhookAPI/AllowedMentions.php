@@ -87,7 +87,7 @@ class AllowedMentions implements \JsonSerializable {
 		$this->suppressAll = true;
 	}
 
-	public function jsonSerialize(): array {
+	public function jsonSerialize(): mixed {
 		if ($this->suppressAll) {
 			return [
 				"parse" => []
