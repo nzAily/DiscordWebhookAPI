@@ -62,6 +62,12 @@ class Message implements \JsonSerializable {
 			$this->data["embeds"][] = $arr;
 		}
 	}
+    
+    public function addComponent(Component $component):void{
+		if(!empty(($arr = $component->asArray()))){
+			$this->data["components"][] = $arr;
+		}
+	}
 
 	public function setTextToSpeech(bool $ttsEnabled):void{
 		$this->data["tts"] = $ttsEnabled;

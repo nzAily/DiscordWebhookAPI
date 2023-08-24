@@ -113,4 +113,9 @@ class AllowedMentions implements \JsonSerializable {
 
 		return $data;
 	}
+    
+    public function asArray(): array{
+		// Why doesn't PHP have a `__toArray()` magic method??? This would've been better.
+		return $this->data;
+	}
 }
