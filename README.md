@@ -72,8 +72,11 @@ $msg->getAllowedMentions()->suppressAll();
 ```
 
 ### Components
-Components are used to provide buttons, interactions with input's and more.
-To use this, you must create an instance to class by using:
+Message components—we'll call them "components" moving forward—are a framework for adding interactive elements to the messages. They're accessible, customizable, and easy to use.
+This components are currently W.I.P. which means it's under of development. If you have an issue about executing this code. You can create an issue or pull request for a feature request or subject/proposal to change.
+To find out about this components, checkout discord docs that can be [read here](https://discord.com/developers/docs/interactions/message-components).
+
+To add Components, you must create an instance to class by using:
 ```php
 $component = new Component();
 ```
