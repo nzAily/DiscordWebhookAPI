@@ -67,6 +67,22 @@ $msg->getAllowedMentions()->addUser($userId1, $userId2); // Only the two users c
 $msg->getAllowedMentions()->addRole($roleId1, $roleId2); // Now also all the people with $roleId1 and $roleId2 will be mentioned
 ```
 
+### Components
+Components are used to provide buttons, interactions with input's and more.
+To use this, you must create an instance to class by using:
+```php
+$component = new Component();
+```
+To add a button link text, just add this:
+```php
+$component->addButtonLink("Click me!", "https://cortexpe.xyz/");
+```
+Now add it to our message instance by using:
+```php
+$msg->addComponent($component);
+```
+
+
 But if you want to suppress every mention out of that message you can use following method.
 ```php
 $msg->getAllowedMentions()->suppressAll();
