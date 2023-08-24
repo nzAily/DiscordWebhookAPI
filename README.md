@@ -66,6 +66,10 @@ Be aware, if you call `Message->getAllowedMentions()` you will get a new instanc
 $msg->getAllowedMentions()->addUser($userId1, $userId2); // Only the two users corresponding with these two ids will be mentioned
 $msg->getAllowedMentions()->addRole($roleId1, $roleId2); // Now also all the people with $roleId1 and $roleId2 will be mentioned
 ```
+But if you want to suppress every mention out of that message you can use following method.
+```php
+$msg->getAllowedMentions()->suppressAll();
+```
 
 ### Components
 Components are used to provide buttons, interactions with input's and more.
@@ -80,12 +84,6 @@ $component->addButtonLink("Click me!", "https://cortexpe.xyz/");
 Now add it to our message instance by using:
 ```php
 $msg->addComponent($component);
-```
-
-
-But if you want to suppress every mention out of that message you can use following method.
-```php
-$msg->getAllowedMentions()->suppressAll();
 ```
 
 **That's all for the Basic Usage of the API. To learn more, You can explore it by reading the API's source code yourself (the code is simple and explanatory) or by using your favorite IDE to index it yourself. :3**
