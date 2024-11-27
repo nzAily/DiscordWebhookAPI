@@ -45,7 +45,8 @@ class DiscordWebhookSendTask extends AsyncTask {
 		$this->message = $message;
 	}
 
-	public function onRun(){
+	public function onRun(): void
+	{
 		$ch = curl_init($this->webhook->getURL());
 		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($this->message));
 		curl_setopt($ch, CURLOPT_POST,true);
